@@ -11,9 +11,16 @@ node {
 		git 'https://github.com/anubhav01jain/node-todo-frontend'
 	}
 	stage('Build') {
-		sh 'npm install'
+            nodejs('nodejs') {
+                sh 'npm run build'
+                echo "Build completed"
+            }
 	}
-	stage('Test') {
+	stage('Testage('Build') {
+        nodejs('nodejs') {
+            sh 'npm run build'
+            echo "Build completed"
+        }st') {
 		sh 'npm test'
 	}
 	stage('Building image') {

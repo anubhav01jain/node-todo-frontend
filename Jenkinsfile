@@ -16,11 +16,7 @@ node {
                 echo "Build completed"
             }
 	}
-	stage('Testage('Build') {
-        nodejs('nodejs') {
-            sh 'npm run build'
-            echo "Build completed"
-        }st') {
+	stage('Test') {
 		sh 'npm test'
 	}
 	stage('Building image') {

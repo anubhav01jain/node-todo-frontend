@@ -10,10 +10,10 @@ node {
 	stage('Git') {
 		git 'https://github.com/anubhav01jain/node-todo-frontend'
 	}
-	stage('Build') {
+	stage('Install dependencies') {
             nodejs('nodejs') {
-                sh 'npm run build'
-                echo "Build completed"
+                sh 'npm install'
+                echo "Modules installed"
             }
 	}
 	stage('Test') {

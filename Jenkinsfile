@@ -16,9 +16,14 @@ node {
                 echo "Modules installed"
             }
 	}
+	
 	stage('Test') {
-		sh 'npm test'
+            nodejs('nodejs') {
+                sh 'npm test'
+                echo "Modules tested"
+            }
 	}
+	
 	stage('Building image') {
         docker.withRegistry( 'https://' + registry, registryCredential ) {
 		    def buildName = registry + ":$BUILD_NUMBER"

@@ -4,7 +4,7 @@ node {
 
     env.AWS_ECR_LOGIN=true
     def newApp
-    def registry = 'hub.docker.com/repository/docker/anubhav01jain/docker-test'
+    def registry = 'anubhav01jain/docker-test'
     def registryCredential = 'dockerhub'
 	
 	stage('Git') {

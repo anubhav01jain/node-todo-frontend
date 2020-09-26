@@ -25,11 +25,7 @@ node {
 	}
 	
 	stage('Building image') {
-        docker.withRegistry( 'https://' + registry, registryCredential ) {
-		    def buildName = registry + ":$BUILD_NUMBER"
-			newApp = docker.build buildName
-			newApp.push()
-        }
+            sh 'sudo docker login -u anubhav01jain -p erp$$erp12A https://anubhav01jain/docker-test' 
 	}
 	stage('Registring image') {
         docker.withRegistry( 'https://' + registry, registryCredential ) {

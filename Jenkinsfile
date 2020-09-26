@@ -25,7 +25,6 @@ node {
 	}
 	
 	stage('Building image') {
-		sh 'chmod 666 /var/run/docker.sock'
             docker.withRegistry( 'https://' + registry, registryCredential ){
 		    def buildName = registry + ":$BUILD_NUMBER"
 			newApp = docker.build buildName

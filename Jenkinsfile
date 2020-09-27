@@ -1,5 +1,5 @@
 node {
-  
+     def app
 	
 	stage('Git') {
 		git 'https://github.com/anubhav01jain/node-todo-frontend'
